@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Task</string>
+    <string name="favorite_icon_active_content_description">Saved to favorite</string>
+    <string name="favorite_icon_inactive_content_description">Removed from favorite</string>
+    <string name="vendor_tag">• %s</string>
+</resources>

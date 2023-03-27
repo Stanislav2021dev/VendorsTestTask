@@ -1,0 +1,38 @@
+buildscript {
+    ext {
+        gradleDependencies = [
+                compileSdk: 33,
+                targetSdk : 33,
+                minSdk    : 26
+        ]
+
+        kotlinVersion = "1.7.10"
+        koin_version = "3.2.0"
+        composeUiVersion = "1.2.0-rc03"
+        composeCompillerVersion = "1.3.0"
+        compose = [
+                //Compose activity RN https://developer.android.com/jetpack/androidx/releases/activity#version_160_3
+                activity        : "androidx.activity:activity-compose:1.6.0",
+                //Compose UI RN https://developer.android.com/jetpack/compose/setup
+                ui              : "androidx.compose.ui:ui:$composeUiVersion",
+                material        : "androidx.compose.material:material:$composeUiVersion",
+                runtime         : "androidx.compose.runtime:runtime:$composeUiVersion",
+                foundation      : "androidx.compose.foundation:foundation:$composeUiVersion",
+                foundationLayout: "androidx.compose.foundation:foundation-layout:$composeUiVersion",
+                //Compose tooling RN https://developer.android.com/jetpack/compose/tooling
+                uiToolingPreview: "androidx.compose.ui:ui-tooling-preview:$composeUiVersion",
+        ]
+
+        //Retrofit RN https://github.com/square/retrofit/blob/master/CHANGELOG.md
+        retrofitVersion = "2.9.0"
+        retrofit = [
+                jsonConverter: "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+        ]
+    }
+}
+
+plugins {
+    id 'com.android.application' version '7.3.1' apply false
+    id 'com.android.library' version '7.3.1' apply false
+    id 'org.jetbrains.kotlin.android' version '1.7.10' apply false
+}
